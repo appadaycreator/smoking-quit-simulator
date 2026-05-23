@@ -35,7 +35,7 @@
   .timeline-item{display:flex;gap:.75rem;padding:.625rem 0;border-bottom:1px solid #e5e7eb;}
   .timeline-item:last-child{border:none;}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"このサービスは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料・登録不要でご利用いただけます。"}},{"@type":"Question","name":"入力データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"お使いのデバイス内にのみ保存されます。外部送信は行いません。"}},{"@type":"Question","name":"結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"あくまで参考情報です。重要な判断の際は専門家にご相談ください。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"このサービスは無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料・登録不要でご利用いただけます。"}},{"@type":"Question","name":"入力データはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"お使いのデバイス内にのみ保存されます。外部送信は行いません。"}},{"@type":"Question","name":"結果はどのくらい正確ですか？","acceptedAnswer":{"@type":"Answer","text":"あくまで参考情報です。重要な判断の際は専門家にご相談ください。"}},{"@type":"Question","name":"どのような人が使っていますか？","acceptedAnswer":{"@type":"Answer","text":"初心者から専門家まで、多くの方にご利用いただいています。特に決断が必要な場面で活躍します。"}},{"@type":"Question","name":"結果をシェアできますか？","acceptedAnswer":{"@type":"Answer","text":"はい、診断結果はスクリーンショットやURLで友人・家族とシェアできます。"}},{"@type":"Question","name":"有料プランはありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ、すべての機能を完全無料でご利用いただけます。"}}]}</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -89,10 +89,10 @@
 <meta name="twitter:image" content="https://appadaycreator.com/twitter-card.png">
 <meta name="twitter:site" content="@appadaycreator">
 </head>
-<body class="font-sans">
+<body class="font-sans"><a href="#main" class="sr-only">本文へスキップ</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<div class="max-w-lg mx-auto px-4 py-10">
+<div role="main" id="main" class="max-w-lg mx-auto px-4 py-10">
   <div class="text-center mb-8">
     <div class="text-6xl mb-4">🚭</div>
     <h1 class="text-2xl font-bold text-gray-800 mb-2">禁煙・節約シミュレーター</h1>
@@ -123,7 +123,7 @@
       </div>
       <div>
         <label>喫煙年数</label>
-        <input type="number" id="years-smoking" class="input-field" placeholder="例: 15" min="0" max="60" value="15">
+        <input type="number" id="years-smoking" class="input-field" placeholder="例: 15" min="0" max="60" value="15" aria-label="例: 15">
       </div>
       <div>
         <label>節約額の運用方法（将来資産計算用）</label>
