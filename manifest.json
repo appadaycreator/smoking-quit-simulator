@@ -4,7 +4,7 @@
   "description": "喫煙本数・タバコ代・年齢を入力して禁煙で取り戻せる金額と健康効果を無料計算。",
   "start_url": "/smoking-quit-simulator/",
   "display": "standalone",
-  "background_color": "#f8faf9",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "lang": "ja",
   "icons": [
