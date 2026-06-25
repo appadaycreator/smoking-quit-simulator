@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>禁煙・節約シミュレーター | グラフで見える成功</title>
+<meta name="description" content="喫煙本数を入力するだけで50年先の節約額と健康回復を自動計算。段階的減煙対応、医学的指標、禁煙外来比較、コミュニティ機能で禁煙継続をサポート。">
+<link rel="canonical" href="https://appadaycreator.com/smoking-quit-simulator/lp/">
+<meta property="og:title" content="禁煙・節約シミュレーター | グラフで見える成功">
+<meta property="og:description" content="喫煙本数を入力するだけで50年先の節約額と健康回復を自動計算。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://appadaycreator.com/smoking-quit-simulator/lp/">
+<meta property="og:image" content="https://appadaycreator.com/smoking-quit-simulator/ogp.png">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1e293b;background:#fff;}
+
+/* Header */
+.header{background:#fff;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:100;padding:0 24px;}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+.logo{font-size:1.1rem;font-weight:800;color:#0EA5E9;text-decoration:none;display:flex;align-items:center;gap:8px;}
+.logo span{color:#10B981;}
+.header-nav{display:flex;align-items:center;gap:24px;}
+.header-nav a{font-size:.88rem;font-weight:600;color:#475569;text-decoration:none;}
+.header-nav a:hover{color:#0EA5E9;}
+.btn-cta{background:#10B981;color:#fff;padding:.55rem 1.25rem;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:background .2s;}
+.btn-cta:hover{background:#059669;color:#fff;}
+
+/* Hero */
+.hero{position:relative;min-height:580px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center top;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,30,60,.78) 0%,rgba(0,30,60,.55) 55%,rgba(0,30,60,.2) 100%);}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%;padding:60px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.hero-text h1{font-size:2.5rem;font-weight:900;color:#fff;line-height:1.25;margin-bottom:16px;letter-spacing:-.5px;}
+.hero-text h1 span{color:#34D399;}
+.hero-text p{font-size:1.05rem;color:#cbd5e1;line-height:1.7;margin-bottom:24px;}
+.hero-stats{display:flex;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
+.hero-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:10px 18px;text-align:center;backdrop-filter:blur(4px);}
+.hero-stat-val{font-size:1.4rem;font-weight:800;color:#34D399;}
+.hero-stat-lbl{font-size:.72rem;color:#cbd5e1;margin-top:2px;}
+.btn-hero{display:inline-block;background:#10B981;color:#fff;padding:1rem 2.5rem;border-radius:12px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(16,185,129,.4);}
+.btn-hero:hover{background:#059669;transform:translateY(-2px);}
+.hero-visual{display:flex;flex-direction:column;gap:12px;}
+.hero-photo{border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);}
+.hero-photo img{width:100%;height:260px;object-fit:cover;display:block;}
+.hero-card{background:rgba(255,255,255,.95);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 8px 30px rgba(0,0,0,.2);}
+.hero-card-icon{font-size:2rem;flex-shrink:0;}
+.hero-card-text .val{font-size:1.5rem;font-weight:800;color:#0EA5E9;}
+.hero-card-text .lbl{font-size:.75rem;color:#64748b;margin-top:2px;}
+
+/* Features */
+.section{padding:72px 24px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-label{font-size:.8rem;font-weight:700;color:#0EA5E9;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.section-title{font-size:2rem;font-weight:800;color:#0f172a;margin-bottom:12px;}
+.section-sub{font-size:1rem;color:#64748b;line-height:1.6;max-width:600px;}
+.section-bg-light{background:#f0f9ff;}
+.section-bg-gray{background:#f8fafc;}
+
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;}
+.feature-card{background:#fff;border-radius:16px;padding:24px 20px;box-shadow:0 4px 20px rgba(0,0,0,.07);transition:transform .2s;}
+.feature-card:hover{transform:translateY(-4px);}
+.feature-icon{width:52px;height:52px;background:#e0f2fe;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.feature-icon img{width:32px;height:32px;object-fit:contain;}
+.feature-card h3{font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:8px;}
+.feature-card p{font-size:.85rem;color:#64748b;line-height:1.6;}
+
+/* Steps */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;position:relative;}
+.steps-grid::before{content:'';position:absolute;top:48px;left:16.66%;right:16.66%;height:2px;background:linear-gradient(90deg,#0EA5E9,#10B981);z-index:0;}
+.step-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.08);position:relative;z-index:1;}
+.step-photo{height:160px;overflow:hidden;}
+.step-photo img{width:100%;height:100%;object-fit:cover;}
+.step-body{padding:20px;}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#0EA5E9;color:#fff;font-weight:800;font-size:1rem;border-radius:50%;margin-bottom:10px;}
+.step-card h3{font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:6px;}
+.step-card p{font-size:.82rem;color:#64748b;line-height:1.6;}
+
+/* Example results */
+.results-demo{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:48px;}
+.results-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+.stat-box{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,.07);text-align:center;}
+.stat-box.primary{background:#0EA5E9;}
+.stat-box .s-val{font-size:1.6rem;font-weight:800;color:#0EA5E9;}
+.stat-box.primary .s-val{color:#fff;}
+.stat-box .s-lbl{font-size:.72rem;color:#94a3b8;margin-top:4px;}
+.stat-box.primary .s-lbl{color:#bae6fd;}
+.chart-wrap{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 24px rgba(0,0,0,.08);}
+.chart-wrap h3{font-size:.95rem;font-weight:700;color:#0f172a;margin-bottom:16px;}
+
+/* Timeline */
+.timeline-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px;}
+.tl-item{background:#fff;border-radius:14px;padding:20px;display:flex;gap:16px;align-items:flex-start;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.tl-icon{width:48px;height:48px;border-radius:12px;background:#dcfce7;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+.tl-item h4{font-size:.88rem;font-weight:700;color:#059669;margin-bottom:4px;}
+.tl-item p{font-size:.82rem;color:#64748b;line-height:1.5;}
+
+/* Clinic compare */
+.compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.compare-card{border-radius:16px;padding:28px 24px;text-align:center;}
+.compare-card.self{background:#fef9c3;border:2px solid #fde047;}
+.compare-card.clinic{background:#dcfce7;border:2px solid #86efac;}
+.compare-card.tool{background:#e0f2fe;border:2px solid #7dd3fc;}
+.compare-card h3{font-size:.9rem;font-weight:700;margin-bottom:8px;}
+.compare-card .rate{font-size:2.2rem;font-weight:900;color:#0EA5E9;line-height:1;}
+.compare-card .rate-lbl{font-size:.72rem;color:#64748b;margin-top:4px;}
+.compare-card p{font-size:.82rem;color:#64748b;line-height:1.6;margin-top:12px;}
+
+/* Photo cards */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.photo-card{border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);}
+.photo-card img{width:100%;height:180px;object-fit:cover;display:block;}
+.photo-card-body{padding:16px;}
+.photo-card-body h3{font-size:.92rem;font-weight:700;color:#0f172a;margin-bottom:6px;}
+.photo-card-body p{font-size:.8rem;color:#64748b;line-height:1.5;}
+
+/* Indexer photo features */
+.photo-features{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+.photo-feat{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:14px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.photo-feat img{width:80px;height:80px;object-fit:cover;border-radius:10px;flex-shrink:0;}
+.photo-feat h3{font-size:.92rem;font-weight:700;color:#0f172a;margin-bottom:6px;}
+.photo-feat p{font-size:.8rem;color:#64748b;line-height:1.5;}
+
+/* FAQ */
+.faq-list{margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto;}
+.faq-item{border-bottom:1px solid #e2e8f0;}
+.faq-item summary{padding:18px 0;cursor:pointer;font-size:.95rem;font-weight:600;color:#0f172a;display:flex;justify-content:space-between;align-items:center;list-style:none;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item[open] summary{color:#0EA5E9;}
+.faq-arrow{font-size:.8rem;transition:transform .2s;color:#94a3b8;}
+.faq-item[open] .faq-arrow{transform:rotate(180deg);color:#0EA5E9;}
+.faq-body{padding:0 0 18px;font-size:.88rem;color:#475569;line-height:1.8;}
+
+/* Final CTA */
+.final-cta{position:relative;padding:80px 24px;text-align:center;overflow:hidden;}
+.final-cta-bg{position:absolute;inset:0;background-image:url('../assets/photos/photo_05.jpg');background-size:cover;background-position:center;}
+.final-cta-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(14,165,233,.92),rgba(16,185,129,.85));}
+.final-cta-content{position:relative;z-index:2;max-width:700px;margin:0 auto;}
+.final-cta h2{font-size:2rem;font-weight:900;color:#fff;margin-bottom:12px;}
+.final-cta p{font-size:1.05rem;color:rgba(255,255,255,.9);margin-bottom:32px;line-height:1.7;}
+.btn-final{display:inline-block;background:#fff;color:#0EA5E9;padding:1.1rem 3rem;border-radius:12px;font-size:1.15rem;font-weight:800;text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.2);transition:all .2s;}
+.btn-final:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.3);}
+
+/* Footer */
+.footer{background:#0f172a;color:#94a3b8;padding:40px 24px;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-logo{font-size:1.1rem;font-weight:800;color:#e2e8f0;}
+.footer-links{display:flex;gap:20px;font-size:.82rem;}
+.footer-links a{color:#94a3b8;text-decoration:none;}
+.footer-links a:hover{color:#e2e8f0;}
+.footer-copy{font-size:.78rem;color:#64748b;margin-top:16px;text-align:center;}
+
+/* Blinman index section */
+.blinman-box{background:#fff;border-radius:16px;padding:28px;box-shadow:0 4px 24px rgba(0,0,0,.08);margin-top:40px;display:flex;gap:32px;align-items:center;}
+.blinman-img{flex-shrink:0;}
+.blinman-img img{width:180px;height:140px;object-fit:cover;border-radius:12px;}
+.blinman-text h3{font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px;}
+.blinman-text p{font-size:.88rem;color:#64748b;line-height:1.7;}
+.blinman-badge{display:inline-block;background:#fee2e2;color:#dc2626;font-size:.72rem;font-weight:700;padding:.25rem .75rem;border-radius:100px;margin-bottom:8px;}
+
+/* Gallery strip */
+.gallery-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px;}
+.gallery-strip img{width:100%;height:120px;object-fit:cover;border-radius:10px;display:block;}
+
+/* Responsive */
+@media(max-width:900px){
+  .features-grid{grid-template-columns:repeat(2,1fr);}
+  .steps-grid{grid-template-columns:1fr;}
+  .steps-grid::before{display:none;}
+  .results-demo{grid-template-columns:1fr;}
+  .compare-grid{grid-template-columns:1fr;}
+  .photo-grid{grid-template-columns:1fr 1fr;}
+  .photo-features{grid-template-columns:1fr;}
+  .timeline-list{grid-template-columns:1fr;}
+  .gallery-strip{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:640px){
+  .hero-content{grid-template-columns:1fr;padding:40px 16px;}
+  .hero-visual{display:none;}
+  .hero-text h1{font-size:1.8rem;}
+  .header-nav{display:none;}
+  .features-grid{grid-template-columns:1fr;}
+  .photo-grid{grid-template-columns:1fr;}
+  .results-stats{grid-template-columns:1fr 1fr;}
+  .gallery-strip{grid-template-columns:repeat(2,1fr);}
+  .blinman-box{flex-direction:column;}
+  .section-title{font-size:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="https://appadaycreator.com/">
+      <img src="../assets/icons/split/01-01.png" alt="" width="28" height="28" style="object-fit:contain;">
+      AppADay<span>Creator</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#features">機能説明</a>
+      <a href="#steps">使い方</a>
+      <a href="#faq">よくある質問</a>
+      <a href="../index.html" class="btn-cta">禁煙計画を立てる</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="section-label" style="color:#34D399;margin-bottom:12px;">無料シミュレーター</p>
+      <h1>禁煙・節約シミュレーター<br><span>グラフで見える成功</span></h1>
+      <p>喫煙本数を入力するだけで、50年先の節約額・健康回復・将来資産をグラフで可視化。段階的減煙対応・医学的指標・禁煙外来比較で禁煙継続をトータルサポート。</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-val">¥12,000</div>
+          <div class="hero-stat-lbl">月間節約額の目安</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">¥144,000</div>
+          <div class="hero-stat-lbl">年間節約額</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">50年</div>
+          <div class="hero-stat-lbl">グラフシミュレーション</div>
+        </div>
+      </div>
+      <a href="../index.html" class="btn-hero">禁煙計画を立てる →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="../assets/photos/photo_02.jpg" alt="禁煙して健康的な生活を">
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">📈</div>
+        <div class="hero-card-text">
+          <div class="val">¥7,850,000</div>
+          <div class="lbl">50年後の運用資産（新NISA試算）</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <p class="section-label">機能説明</p>
+    <h2 class="section-title">このツールでできること</h2>
+    <p class="section-sub">入力するだけで禁煙のメリットを多角的に数値化。継続のモチベーションを科学的に高めます。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/01-07.png" alt="グラフ"></div>
+        <h3>50年先まで見えるグラフ</h3>
+        <p>禁煙後の節約額を最大50年分グラフ化。複数の時間軸で成果を可視化します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/01-02.png" alt="節約"></div>
+        <h3>医療費・生命保険節約も算出</h3>
+        <p>たばこ代だけでなく医療費削減・生命保険非喫煙者割引まで含めた総節約額を計算。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/01-04.png" alt="健康"></div>
+        <h3>禁煙・健康回復の可視化</h3>
+        <p>ブリンクマン指数など医学的指標と、禁煙後20分〜15年の健康回復タイムラインを表示。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/01-05.png" alt="資産"></div>
+        <h3>新NISA運用シミュレーション</h3>
+        <p>節約額を新NISAで積み立てた場合の将来資産を自動試算。老後資金への貢献度も確認。</p>
+      </div>
+    </div>
+
+    <!-- Second row of features -->
+    <div class="features-grid" style="margin-top:20px;">
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/02-01.png" alt="肺"></div>
+        <h3>ブリンクマン指数</h3>
+        <p>医学的な喫煙リスク指標「ブリンクマン指数」をリアルタイム計算。健康リスクを客観視。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/03-02.png" alt="シェア"></div>
+        <h3>SNS共有・結果画像化</h3>
+        <p>計算結果をX（Twitter）・LINEで一発シェア。OGP対応で見やすい画像で共有できます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/03-04.png" alt="通知"></div>
+        <h3>禁煙カウンター</h3>
+        <p>禁煙開始日から秒単位でカウント。節約額をリアルタイム表示してモチベーションを維持。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><img src="../assets/icons/split/04-01.png" alt="外来"></div>
+        <h3>禁煙外来費用と比較</h3>
+        <p>保険適用の禁煙外来費用と節約額を比較。何ヶ月で元が取れるか一目でわかります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Steps -->
+<section class="section section-bg-light" id="steps">
+  <div class="section-inner">
+    <p class="section-label">使い方</p>
+    <h2 class="section-title">使い方はかんたん3ステップ</h2>
+    <p class="section-sub">登録不要・完全無料。スマホでも30秒でシミュレーション完了。</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="../assets/photos/photo_07.jpg" alt="喫煙本数を入力">
+        </div>
+        <div class="step-body">
+          <div class="step-num">1</div>
+          <h3>喫煙情報を入力</h3>
+          <p>1日の本数・タバコ代・喫煙年数を入力。段階的減煙の設定も可能です。</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="../assets/photos/photo_08.jpg" alt="計算実行">
+        </div>
+        <div class="step-body">
+          <div class="step-num">2</div>
+          <h3>シミュレーション実行</h3>
+          <p>「シミュレーション開始」ボタンを押すだけ。50年分のグラフが即座に生成されます。</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="../assets/photos/photo_09.jpg" alt="結果を確認">
+        </div>
+        <div class="step-body">
+          <div class="step-num">3</div>
+          <h3>結果を確認・シェア</h3>
+          <p>節約額・健康回復・将来資産を確認。結果をSNSで家族・友人に共有できます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Example Results -->
+<section class="section" id="results">
+  <div class="section-inner">
+    <p class="section-label">シミュレーション実例</p>
+    <h2 class="section-title">シミュレーション結果（実例）</h2>
+    <p class="section-sub">1日20本・1箱580円・喫煙歴15年の場合のシミュレーション例です。</p>
+    <div class="results-demo">
+      <div>
+        <div class="results-stats">
+          <div class="stat-box">
+            <div class="s-val">¥144,000</div>
+            <div class="s-lbl">年間節約額</div>
+          </div>
+          <div class="stat-box primary">
+            <div class="s-val">¥1,440,000</div>
+            <div class="s-lbl">10年後の節約額</div>
+          </div>
+          <div class="stat-box">
+            <div class="s-val">¥596万</div>
+            <div class="s-lbl">30年後（新NISA）</div>
+          </div>
+          <div class="stat-box">
+            <div class="s-val">¥12,000</div>
+            <div class="s-lbl">月の節約額</div>
+          </div>
+        </div>
+        <div style="background:#dcfce7;border-radius:12px;padding:16px 20px;display:flex;gap:12px;align-items:center;">
+          <img src="../assets/icons/split/02-02.png" alt="" width="36" style="object-fit:contain;">
+          <div>
+            <div style="font-size:.82rem;font-weight:700;color:#059669;">1年後：心疾患リスクが喫煙者の半分に低下</div>
+            <div style="font-size:.78rem;color:#64748b;margin-top:2px;">禁煙後20分から健康回復がはじまります</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart-wrap">
+        <h3>30年後の資産推移（新NISA 年利4%想定）</h3>
+        <canvas id="demoChart" height="220"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo gallery row -->
+<section class="section section-bg-gray">
+  <div class="section-inner">
+    <p class="section-label">健康回復</p>
+    <h2 class="section-title">体の回復タイムライン</h2>
+    <p class="section-sub">禁煙後の体の変化は驚くほど早く始まります。科学的データに基づいたタイムラインを確認できます。</p>
+    <div class="timeline-list">
+      <div class="tl-item">
+        <div class="tl-icon">❤️</div>
+        <div>
+          <h4>20分後</h4>
+          <p>心拍数・血圧が正常値に近づき始める</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🫁</div>
+        <div>
+          <h4>12時間後</h4>
+          <p>血液中の一酸化炭素濃度が正常レベルに回復</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🏃</div>
+        <div>
+          <h4>2〜3ヶ月後</h4>
+          <p>血液循環が改善し、肺機能が30%向上</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">💪</div>
+        <div>
+          <h4>1年後</h4>
+          <p>心臓病リスクが喫煙者の半分に低下</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🧠</div>
+        <div>
+          <h4>5年後</h4>
+          <p>脳卒中リスクが非喫煙者と同レベルに</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-icon">🏆</div>
+        <div>
+          <h4>15年後</h4>
+          <p>心臓病リスクが非喫煙者とほぼ同レベルに</p>
+        </div>
+      </div>
+    </div>
+    <!-- Gallery photos -->
+    <div class="gallery-strip" style="margin-top:32px;">
+      <img src="../assets/photos/photo_10.jpg" alt="健康回復1">
+      <img src="../assets/photos/photo_11.jpg" alt="健康回復2">
+      <img src="../assets/photos/photo_12.jpg" alt="健康回復3">
+      <img src="../assets/photos/photo_13.jpg" alt="健康回復4">
+    </div>
+  </div>
+</section>
+
+<!-- Blinman index + medical -->
+<section class="section section-bg-light">
+  <div class="section-inner">
+    <p class="section-label">医学的指標</p>
+    <h2 class="section-title">ブリンクマン指数で喫煙リスクを可視化</h2>
+    <p class="section-sub">医療現場で使われる客観的な喫煙リスク指標を、本ツールで自動計算します。</p>
+    <div class="blinman-box">
+      <div class="blinman-img">
+        <img src="../assets/photos/photo_03.jpg" alt="医学的指標">
+      </div>
+      <div class="blinman-text">
+        <span class="blinman-badge">医学的指標</span>
+        <h3>ブリンクマン指数 = 1日本数 × 喫煙年数</h3>
+        <p>ブリンクマン指数は医学的な喫煙リスクの目安です。<br>
+        <strong>200以上</strong>：肺がん・COPD・喉頭がんのリスク上昇<br>
+        <strong>400以上</strong>：COPD（慢性閉塞性肺疾患）リスクが顕著に増加<br>
+        <strong>600以上</strong>：肺がん・喉頭がんの高リスク<br>
+        本ツールではシミュレーション時にブリンクマン指数を自動計算し、あなたの喫煙リスクを数値で示します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Clinic compare -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">費用比較</p>
+    <h2 class="section-title">禁煙外来と比較</h2>
+    <p class="section-sub">禁煙方法ごとの費用・成功率・メリットを比較して、最適な選択をサポートします。</p>
+    <div class="compare-grid">
+      <div class="compare-card self">
+        <img src="../assets/icons/split/03-01.png" alt="" width="40" style="margin-bottom:12px;object-fit:contain;">
+        <h3>自力禁煙</h3>
+        <div class="rate" style="color:#f59e0b;">3〜5%</div>
+        <div class="rate-lbl">成功率</div>
+        <p>費用はかからないが意志力だけでの成功は難しい。失敗しても繰り返し挑戦できる。</p>
+      </div>
+      <div class="compare-card clinic">
+        <img src="../assets/icons/split/04-01.png" alt="" width="40" style="margin-bottom:12px;object-fit:contain;">
+        <h3>禁煙外来（保険適用）</h3>
+        <div class="rate" style="color:#059669;">30〜40%</div>
+        <div class="rate-lbl">成功率</div>
+        <p>5回通院で約1.5万円。月の節約額で2ヶ月以内に元が取れる。医師のサポートで高成功率。</p>
+      </div>
+      <div class="compare-card tool">
+        <img src="../assets/icons/split/01-07.png" alt="" width="40" style="margin-bottom:12px;object-fit:contain;">
+        <h3>本ツール＋禁煙補助</h3>
+        <div class="rate">無料</div>
+        <div class="rate-lbl">利用料金</div>
+        <p>節約額・健康効果を数値化してモチベーション維持。禁煙カウンターで達成感を可視化。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Photo rich features -->
+<section class="section section-bg-gray">
+  <div class="section-inner">
+    <p class="section-label">活用シーン</p>
+    <h2 class="section-title">こんな方に使われています</h2>
+    <p class="section-sub">節約・健康・家族・老後資金など、さまざまなモチベーションで活用されています。</p>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <img src="../assets/photos/photo_14.jpg" alt="禁煙で節約">
+        <div class="photo-card-body">
+          <h3>節約効果を数字で確認したい方</h3>
+          <p>月・年・30年後の節約額をグラフで可視化。禁煙の経済的メリットをひと目で確認できます。</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../assets/photos/photo_15.jpg" alt="健康のために">
+        <div class="photo-card-body">
+          <h3>健康のために禁煙を決意した方</h3>
+          <p>ブリンクマン指数・健康回復タイムラインで体への影響を科学的に把握できます。</p>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="../assets/photos/photo_16.jpg" alt="家族への説得">
+        <div class="photo-card-body">
+          <h3>家族・職場の仲間を説得したい方</h3>
+          <p>具体的な数字と健康データで禁煙を後押し。結果をSNSや印刷で共有できます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="photo-features">
+      <div class="photo-feat">
+        <img src="../assets/photos/photo_17.jpg" alt="老後資産">
+        <div>
+          <h3>老後資金を確保したい方</h3>
+          <p>節約額を新NISAで運用した場合の50年後の試算。禁煙が老後資産形成に直結することを実感できます。</p>
+        </div>
+      </div>
+      <div class="photo-feat">
+        <img src="../assets/photos/photo_18.jpg" alt="減煙ステップ">
+        <div>
+          <h3>いきなり禁煙は難しい方（段階的減煙）</h3>
+          <p>段階的な本数削減プランに対応。無理なく禁煙ゴールに近づけるステップアップ機能を搭載。</p>
+        </div>
+      </div>
+      <div class="photo-feat">
+        <img src="../assets/photos/photo_19.jpg" alt="禁煙外来">
+        <div>
+          <h3>禁煙外来を検討している方</h3>
+          <p>外来費用と節約額を比較して費用対効果を試算。「何ヶ月で元が取れるか」が一目でわかります。</p>
+        </div>
+      </div>
+      <div class="photo-feat">
+        <img src="../assets/photos/photo_20.jpg" alt="モチベーション維持">
+        <div>
+          <h3>禁煙継続のモチベーションが欲しい方</h3>
+          <p>禁煙開始日を入力すると、達成日数・時間・分・秒と節約額をリアルタイムカウントします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-bg-light" id="faq">
+  <div class="section-inner" style="text-align:center;">
+    <p class="section-label">よくある質問</p>
+    <h2 class="section-title">FAQ</h2>
+    <details class="faq-list" style="margin-top:40px;text-align:left;">
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>1日20本吸っている場合、禁煙で年間いくら節約できますか？ <span class="faq-arrow">▼</span></summary>
+          <div class="faq-body">1箱580円のタバコを1日1箱（20本）吸っている場合、年間約21万1,700円の節約になります。10年間では211万円、新NISAで運用した場合30年後には約600万円以上になる計算です。本ツールに本数と価格を入力すると、あなたの実際の節約額を即計算できます。</div>
+        </details>
+        <details class="faq-item">
+          <summary>禁煙してから体への効果はいつ頃から現れますか？ <span class="faq-arrow">▼</span></summary>
+          <div class="faq-body">禁煙後20分で心拍数・血圧が改善し始め、12時間後には血中一酸化炭素が正常化します。2〜3ヶ月後に肺機能が30%向上し、1年後に心疾患リスクが喫煙者の半分に低下。5年後に脳卒中リスクが非喫煙者レベルに、10年後に肺がんリスクが半減します。</div>
+        </details>
+        <details class="faq-item">
+          <summary>禁煙外来の費用は節約額で元が取れますか？ <span class="faq-arrow">▼</span></summary>
+          <div class="faq-body">保険適用の禁煙外来は5回通院で約1.5万円が目安です。1日20本（580円）の場合、月の節約額は約8,700円なので、約2ヶ月で元が取れます。禁煙外来の成功率は30〜40%で、自力禁煙（3〜5%）と比べ大幅に高くなります。</div>
+        </details>
+        <details class="faq-item">
+          <summary>節約した金額を新NISAで運用するとどうなりますか？ <span class="faq-arrow">▼</span></summary>
+          <div class="faq-body">新NISA（年利4%想定）で毎月積み立てた場合、30年後の資産は普通預金より大幅に増加します。1日20本・1箱580円なら月約8,700円の節約になり、30年後には約600万円以上の運用資産になる試算です。</div>
+        </details>
+        <details class="faq-item">
+          <summary>段階的減煙にも対応していますか？ <span class="faq-arrow">▼</span></summary>
+          <div class="faq-body">はい、対応しています。段階的減煙モードでは現在の本数から目標本数まで少しずつ削減するプランを設定できます。いきなり完全禁煙が難しい方でも、無理なくゴールに近づけるサポートをします。</div>
+        </details>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- Additional photos strip -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">今すぐはじめよう</p>
+    <h2 class="section-title">超リサポート機能</h2>
+    <p class="section-sub">禁煙成功に向けたすべてのサポート機能を一つのツールで提供します。</p>
+    <div class="gallery-strip">
+      <img src="../assets/photos/photo_04.jpg" alt="サポート1">
+      <img src="../assets/photos/photo_06.jpg" alt="サポート2">
+      <img src="../assets/photos/photo_21.jpg" alt="サポート3">
+      <img src="../assets/photos/photo_22.jpg" alt="サポート4">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px;">
+      <div style="background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <img src="../assets/icons/split/03-06.png" alt="" width="32" style="margin-bottom:8px;object-fit:contain;">
+        <div style="font-size:.85rem;font-weight:700;color:#0f172a;">禁煙カウンター</div>
+        <div style="font-size:.75rem;color:#64748b;margin-top:4px;">秒単位でカウント</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <img src="../assets/icons/split/04-02.png" alt="" width="32" style="margin-bottom:8px;object-fit:contain;">
+        <div style="font-size:.85rem;font-weight:700;color:#0f172a;">詳細計算</div>
+        <div style="font-size:.75rem;color:#64748b;margin-top:4px;">50年分グラフ</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <img src="../assets/icons/split/04-03.png" alt="" width="32" style="margin-bottom:8px;object-fit:contain;">
+        <div style="font-size:.85rem;font-weight:700;color:#0f172a;">CSVエクスポート</div>
+        <div style="font-size:.75rem;color:#64748b;margin-top:4px;">データ保存</div>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+        <img src="../assets/icons/split/03-02.png" alt="" width="32" style="margin-bottom:8px;object-fit:contain;">
+        <div style="font-size:.85rem;font-weight:700;color:#0f172a;">SNSシェア</div>
+        <div style="font-size:.75rem;color:#64748b;margin-top:4px;">X・LINE対応</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="final-cta-bg"></div>
+  <div class="final-cta-overlay"></div>
+  <div class="final-cta-content">
+    <h2>今日が、禁煙をはじめる日に。</h2>
+    <p>まずは喫煙本数と価格を入力するだけ。あなたの禁煙がもたらす節約額と健康回復を今すぐ確認しましょう。</p>
+    <a href="../index.html" class="btn-final">禁煙計画を立てる →</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">AppADayCreator</div>
+    <div class="footer-links">
+      <a href="../privacy-policy.html">プライバシーポリシー</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <a href="https://appadaycreator.com/">ホーム</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 AppADayCreator / Tech&Brace. All rights reserved.</p>
+</footer>
+
+<script>
+// Demo chart
+(function(){
+  var ctx = document.getElementById('demoChart').getContext('2d');
+  var labels = ['現在','5年','10年','20年','30年'];
+  var monthly = 12000;
+  function fv(m, months, r) {
+    if(r===0) return m*months;
+    return m*((Math.pow(1+r,months)-1)/r);
+  }
+  var r = 0.04/12;
+  var values = [0, fv(monthly,60,r), fv(monthly,120,r), fv(monthly,240,r), fv(monthly,360,r)].map(v=>Math.round(v/10000));
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: '新NISA運用資産（万円）',
+        data: values,
+        borderColor: '#0EA5E9',
+        backgroundColor: 'rgba(14,165,233,0.1)',
+        borderWidth: 3,
+        fill: true,
+        tension: 0.4,
+        pointBackgroundColor: '#0EA5E9',
+        pointRadius: 6,
+        pointHoverRadius: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {display: false},
+        tooltip: {callbacks: {label: function(c){return c.raw+'万円';}}}
+      },
+      scales: {
+        y: {beginAtZero: true, ticks: {callback: function(v){return v+'万円';}}}
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#7c3aed">
-<meta name="description" content="喫煙本数・タバコ代・年齢を入力して禁煙で取り戻せる金額と健康効果を無料計算">
+<meta name="description" content="喫煙本数・タバコ代・喫煙年数を入力して禁煙後の月間節約額・10年累計・30年後の運用資産と健康回復タイムラインを無料計算。新NISA運用シミュレーション・禁煙外来費用との比較・禁煙カウンター付き。完全無料・登録不要。">
 <meta name="author" content="AppADayCreator">
 <meta property="og:title" content="禁煙計算【無料】タバコをやめると何年で何万円節約できる？">
 <meta property="og:description" content="禁煙後の節約額・健康回復タイムライン・将来資産を無料シミュレーション。">
@@ -97,6 +97,133 @@ button, .btn, .btn-primary, .option-btn, [role="button"] { min-height: 48px; min
 
 /* AdSense unfilled: collapse empty ad slots */
 ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!important;height:0!important}
+
+/* ===== Design v2 overrides ===== */
+:root{--primary:#0EA5E9;--accent:#10B981;--dark:#0f172a;}
+body{background:#f0f9ff!important;}
+
+/* Site header */
+.site-header{background:#fff;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:200;padding:0 20px;}
+.site-header-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;}
+.site-logo{font-size:1rem;font-weight:800;color:#0EA5E9;text-decoration:none;display:flex;align-items:center;gap:6px;}
+.site-logo span{color:#10B981;}
+.site-nav{display:flex;align-items:center;gap:18px;}
+.site-nav a{font-size:.83rem;font-weight:600;color:#475569;text-decoration:none;}
+.site-nav a:hover{color:#0EA5E9;}
+.site-nav .nav-cta{background:#10B981;color:#fff!important;padding:.45rem 1.1rem;border-radius:8px;font-weight:700;}
+.site-nav .nav-cta:hover{background:#059669;}
+
+/* Page hero (service page) */
+.page-hero{background:linear-gradient(135deg,#0EA5E9 0%,#0284C7 100%);padding:28px 20px 0;}
+.page-hero-inner{max-width:1140px;margin:0 auto;display:flex;align-items:flex-end;gap:24px;}
+.page-hero-title{color:#fff;padding-bottom:24px;flex-shrink:0;}
+.page-hero-title h1{font-size:1.6rem;font-weight:900;line-height:1.25;margin-bottom:6px;}
+.page-hero-title p{font-size:.85rem;color:rgba(255,255,255,.85);line-height:1.5;}
+.page-hero-img{flex:1;display:flex;justify-content:flex-end;overflow:hidden;max-height:120px;border-radius:12px 12px 0 0;min-width:0;}
+.page-hero-img img{width:100%;max-width:380px;height:120px;object-fit:cover;object-position:center 30%;display:block;}
+
+/* Two-column layout */
+.calc-layout{max-width:1140px;margin:0 auto;padding:24px 20px;display:grid;grid-template-columns:360px 1fr;gap:24px;align-items:start;}
+.calc-panel{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:24px;position:sticky;top:80px;}
+.calc-panel h2{font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid #e0f2fe;display:flex;align-items:center;gap:8px;}
+.result-panel{display:flex;flex-direction:column;gap:20px;}
+
+/* Input redesign */
+.calc-panel .input-field{border:2px solid #e0f2fe!important;border-radius:10px!important;}
+.calc-panel .input-field:focus{border-color:#0EA5E9!important;}
+.calc-panel label{font-size:.82rem!important;font-weight:700!important;color:#374151!important;}
+.calc-panel .btn-primary{background:linear-gradient(135deg,#0EA5E9,#0284C7)!important;border-radius:10px!important;font-size:1rem!important;}
+.calc-panel .btn-primary:hover{background:linear-gradient(135deg,#0284C7,#0369a1)!important;}
+
+/* Result stats bar */
+.result-stats-bar{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:20px 24px;}
+.result-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.rs-box{text-align:center;padding:14px 8px;border-radius:12px;background:#f0f9ff;border:1px solid #e0f2fe;}
+.rs-box.rs-accent{background:#0EA5E9;border-color:#0EA5E9;}
+.rs-val{font-size:1.3rem;font-weight:800;color:#0EA5E9;}
+.rs-box.rs-accent .rs-val{color:#fff;}
+.rs-lbl{font-size:.68rem;color:#94a3b8;margin-top:3px;}
+.rs-box.rs-accent .rs-lbl{color:#bae6fd;}
+
+/* Graph card */
+.graph-card{background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:24px;}
+.graph-card h3{font-size:.92rem;font-weight:700;color:#0f172a;margin-bottom:16px;display:flex;align-items:center;gap:6px;}
+
+/* What tool can do section */
+.what-section{background:#fff;padding:56px 20px;}
+.what-inner{max-width:1140px;margin:0 auto;}
+.what-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;}
+.what-card{border-radius:14px;padding:20px;text-align:center;border:1px solid #e2e8f0;}
+.what-card img.what-icon{width:44px;height:44px;object-fit:contain;margin-bottom:12px;}
+.what-card h3{font-size:.88rem;font-weight:700;color:#0f172a;margin-bottom:6px;}
+.what-card p{font-size:.78rem;color:#64748b;line-height:1.5;}
+
+/* Health body section */
+.body-section{background:#f0fdf4;padding:56px 20px;}
+.body-inner{max-width:1140px;margin:0 auto;}
+.body-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px;}
+.body-row{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:12px;padding:16px;}
+.body-icon{font-size:1.8rem;flex-shrink:0;}
+.body-row h4{font-size:.88rem;font-weight:700;color:#059669;}
+.body-row p{font-size:.78rem;color:#64748b;line-height:1.5;margin-top:3px;}
+.body-photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;}
+.body-photo-strip img{width:100%;height:130px;object-fit:cover;border-radius:10px;display:block;}
+
+/* Action section */
+.action-section{background:#fff;padding:56px 20px;}
+.action-inner{max-width:1140px;margin:0 auto;}
+.action-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px;align-items:center;}
+.action-photo img{width:100%;height:240px;object-fit:cover;border-radius:16px;}
+.action-items{display:flex;flex-direction:column;gap:16px;}
+.action-item{display:flex;gap:12px;align-items:flex-start;background:#f8fafc;border-radius:12px;padding:14px;}
+.action-item-icon{width:40px;height:40px;object-fit:contain;flex-shrink:0;}
+.action-item h4{font-size:.88rem;font-weight:700;color:#0f172a;margin-bottom:4px;}
+.action-item p{font-size:.78rem;color:#64748b;line-height:1.5;}
+
+/* Section common */
+.s-label{font-size:.75rem;font-weight:700;color:#0EA5E9;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;}
+.s-title{font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:8px;}
+.s-sub{font-size:.9rem;color:#64748b;line-height:1.6;}
+
+/* Photo detail features */
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px;}
+.detail-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.detail-card img{width:100%;height:140px;object-fit:cover;display:block;}
+.detail-card-body{padding:14px;}
+.detail-card-body h4{font-size:.85rem;font-weight:700;color:#0f172a;margin-bottom:4px;}
+.detail-card-body p{font-size:.75rem;color:#64748b;line-height:1.5;}
+
+/* Final LP CTA banner */
+.lp-banner{background:linear-gradient(135deg,#0EA5E9,#10B981);padding:40px 20px;text-align:center;margin:0;}
+.lp-banner h2{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:8px;}
+.lp-banner p{font-size:.9rem;color:rgba(255,255,255,.9);margin-bottom:20px;}
+.lp-banner-btn{display:inline-block;background:#fff;color:#0EA5E9;padding:.9rem 2.5rem;border-radius:10px;font-weight:800;font-size:1rem;text-decoration:none;}
+
+/* Mobile */
+@media(max-width:880px){
+  .calc-layout{grid-template-columns:1fr;}
+  .calc-panel{position:static;}
+  .result-stats-grid{grid-template-columns:repeat(2,1fr);}
+  .what-grid{grid-template-columns:repeat(2,1fr);}
+  .body-grid{grid-template-columns:1fr;}
+  .action-grid{grid-template-columns:1fr;}
+  .detail-grid{grid-template-columns:1fr 1fr;}
+  .page-hero-img{display:none;}
+}
+@media(max-width:480px){
+  .what-grid{grid-template-columns:1fr 1fr;}
+  .detail-grid{grid-template-columns:1fr;}
+  .body-photo-strip{grid-template-columns:1fr 1fr;}
+  .site-nav a:not(.nav-cta){display:none;}
+}
+
+/* V3: Tooltip enhancement */
+[title]{position:relative;}
+[title]:hover::after{content:attr(title);position:absolute;bottom:120%;left:50%;transform:translateX(-50%);background:#059669;color:white;padding:0.6rem 0.75rem;border-radius:0.5rem;font-size:0.85rem;white-space:nowrap;z-index:1000;font-weight:500;box-shadow:0 4px 12px rgba(5,150,105,0.3);}
+[title]:hover::before{content:'';position:absolute;bottom:115%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:#059669;z-index:1000;}
+
+/* Enhance ? icon styling */
+span[title]{background:#f0fdf4;padding:0.15rem 0.35rem;border-radius:0.25rem;font-size:0.9rem;vertical-align:middle;display:inline-flex;align-items:center;justify-content:center;min-width:20px;min-height:20px;}
 </style>
 
 <script type="application/ld+json">
@@ -148,34 +275,60 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
 @media(max-width:480px){button,[class*=btn]{min-height:48px!important;font-size:15px!important;}input,select,textarea{font-size:16px!important;min-height:44px!important;}[class*=card],[class*=max-w]{padding:16px!important;}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://appadaycreator.com/"},{"@type":"ListItem","position":2,"name":"健康","item":"https://appadaycreator.com/category/health/"},{"@type":"ListItem","position":3,"name":"禁煙計算タバコをやめると何年で何万円節約できる？","item":"https://appadaycreator.com/smoking-quit-simulator/"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "禁煙・節約シミュレーターの使い方", "description": "禁煙・節約シミュレーターを使う手順", "step": [{"@type": "HowToStep", "position": 1, "name": "ステップ1", "text": "ページを開き、入力フォームの項目を確認する"}, {"@type": "HowToStep", "position": 2, "name": "ステップ2", "text": "必要な情報を入力または選択する"}, {"@type": "HowToStep", "position": 3, "name": "ステップ3", "text": "実行ボタンをクリックして結果を取得する"}, {"@type": "HowToStep", "position": 4, "name": "ステップ4", "text": "表示された結果・アドバイスを確認する"}, {"@type": "HowToStep", "position": 5, "name": "ステップ5", "text": "必要に応じてコピー・SNSシェアで活用する"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"「禁煙・節約シミュレーター」は無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、完全無料・登録不要です。"}},{"@type":"Question","name":"スマートフォンでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"はい、モバイル対応済みです。"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"禁煙・節約シミュレーターの使い方","description":"喫煙本数・タバコ代・年数を入力して禁煙後の節約額と健康回復タイムラインを計算する手順","step":[{"@type":"HowToStep","position":1,"name":"1日の喫煙本数を入力","text":"「1日の喫煙本数」欄に、1日に吸うタバコの本数を入力します（例：20本）"},{"@type":"HowToStep","position":2,"name":"タバコの価格・種類を選択","text":"購入しているタバコの価格帯（500〜620円）を選択します。メビウス・マルボロ等は580円が目安です"},{"@type":"HowToStep","position":3,"name":"喫煙年数と節約額の運用方法を選択","text":"喫煙を始めてからの年数を入力し、節約額を新NISA・普通預金・積極投資のいずれで運用するかを選択します"},{"@type":"HowToStep","position":4,"name":"禁煙開始日を入力（任意）","text":"すでに禁煙中の方は禁煙開始日を入力すると、リアルタイムで達成日数と節約額をカウントします"},{"@type":"HowToStep","position":5,"name":"シミュレーションを実行して結果を確認","text":"「シミュレーションする」ボタンをクリックすると、月間節約額・10年後の累計・30年後の運用資産・健康回復タイムラインが表示されます"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"1日20本吸っている場合、禁煙で年間いくら節約できますか？","acceptedAnswer":{"@type":"Answer","text":"1箱580円のタバコを1日1箱（20本）吸っている場合、年間約21万1,700円の節約になります。10年間では211万円、新NISAで運用した場合30年後には約700万円以上になる計算です。本ツールに本数と価格を入力すると、あなたの実際の節約額を即計算できます。"}},{"@type":"Question","name":"禁煙してから体への効果はいつ頃から現れますか？","acceptedAnswer":{"@type":"Answer","text":"禁煙後20分で心拍数・血圧が改善し始め、12時間後には血中一酸化炭素が正常化します。2〜3ヶ月後に肺機能が30%向上し、1年後に心疾患リスクが喫煙者の半分に低下。5年後に脳卒中リスクが非喫煙者レベルに、10年後に肺がんリスクが半減します。"}},{"@type":"Question","name":"禁煙外来の費用は節約額で元が取れますか？","acceptedAnswer":{"@type":"Answer","text":"保険適用の禁煙外来は5回通院で約1.5万円が目安です。1日20本（580円）の場合、月の節約額は約8,700円なので、約2ヶ月で元が取れます。禁煙外来の成功率は30〜40%で、自力禁煙（3〜5%）と比べ大幅に高くなります。"}},{"@type":"Question","name":"節約した金額を新NISAで運用するとどうなりますか？","acceptedAnswer":{"@type":"Answer","text":"新NISA（年利4%想定）で毎月積み立てた場合、30年後の資産は普通預金より大幅に増加します。1日20本・1箱580円なら月約8,700円の節約になり、30年後には約600万円以上の運用資産になる試算です。"}},{"@type":"Question","name":"禁煙カウンターはどう使いますか？","acceptedAnswer":{"@type":"Answer","text":"「禁煙開始日」欄に禁煙を始めた日付を入力してシミュレーションを実行すると、禁煙達成日数・時間・分・秒をリアルタイムでカウントし、その時点までの節約額も自動計算します。モチベーション維持にご活用ください。"}}]}</script>
 </head>
 <body class="font-sans">
-<div style="background:#4338ca;padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#c7d2fe;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#c7d2fe;text-decoration:none">ホーム</a></div>
-<!-- r21-breadcrumb -->
-<nav aria-label="パンくずリスト" style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:5px 16px;font-size:.78rem;color:#6b7280;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
-  <a href="/" style="color:#4f46e5;text-decoration:none">ホーム</a>
-  <span style="margin:0 .35rem;color:#9ca3af">›</span>
-  <span style="color:#374151">禁煙計算【無料】タバコをやめると何年で何万円節約できる？</span>
-</nav>
+
+<!-- Site Header -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="https://appadaycreator.com/">
+      <img src="assets/icons/split/01-01.png" alt="" width="24" height="24" style="object-fit:contain;">
+      AppADay<span>Creator</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#what-section">機能説明</a>
+      <a href="#body-section">健康回復</a>
+      <a href="lp/index.html">LP</a>
+      <a href="lp/index.html" class="nav-cta">禁煙計画を立てる</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-title">
+      <h1>禁煙・節約シミュレーター</h1>
+      <p>グラフで見える成功 | 50年先まで節約額・健康回復を可視化</p>
+    </div>
+    <div class="page-hero-img">
+      <img src="assets/photos/photo_02.jpg" alt="禁煙で健康的な生活">
+    </div>
+  </div>
+</div>
+
 <a href="#main" class="sr-only">本文へスキップ</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<div role="main" id="main" class="max-w-2xl mx-auto px-4 py-10">
-  <div class="text-center mb-8">
-    <div class="text-6xl mb-4">🚭</div>
-    <h1 class="text-2xl font-bold text-gray-800 mb-2">禁煙・節約シミュレーター</h1>
-    <p class="text-gray-600 text-sm">禁煙で取り戻せるお金・健康・<br>投資した場合の将来資産を無料計算</p>
-  </div>
+<!-- Two-column calculator layout -->
+<div class="calc-layout" role="main" id="main">
 
-  <div class="card p-6 mb-6">
-    <h2 class="font-bold text-gray-800 mb-4">🚬 現在の喫煙状況を入力</h2>
+  <!-- Left: Form Panel -->
+  <div class="calc-panel">
+    <h2>
+      <img src="assets/icons/split/01-01.png" alt="" width="22" style="object-fit:contain;">
+      喫煙習慣の情報を入力
+    </h2>
+
+  <div class="card p-6 mb-6" style="background:transparent;box-shadow:none;padding:0;margin:0;">
+    <h2 class="font-bold text-gray-800 mb-4" style="display:none;">🚬 現在の喫煙状況を入力</h2>
     <div class="space-y-4">
       <div>
         <label for="cigs-per-day">1日の喫煙本数 <span title="1日に吸うタバコの本数。1〜80本の間で入力してください" style="cursor:help;color:#059669;font-weight:bold;">?</span></label>
         <input type="number" id="cigs-per-day" class="input-field" placeholder="例: 20" min="1" max="80" value="10" aria-label="1日の喫煙本数（1〜80本）" aria-describedby="help-cigs">
-        <small id="help-cigs" style="display:block;margin-top:0.25rem;color:#6b7280;font-size:0.8rem;">例：1箱20本を1日で吸う場合は「20」</small>
+        <small id="help-cigs" style="display:block;margin-top:0.25rem;color:#1e293b;font-size:0.85rem;font-weight:500;">例：1箱20本を1日で吸う場合は「20」</small>
       </div>
       <div>
         <label>タバコの種類・価格（1箱） <span title="購入するタバコの1箱あたりの価格を選択します" style="cursor:help;color:#059669;font-weight:bold;">?</span></label>
@@ -185,12 +338,12 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           <option value="620">620円（プレミアム品）</option>
           <option value="550">550円（アイコス・グローのタバコ）</option>
         </select>
-        <small id="help-price" style="display:block;margin-top:0.25rem;color:#6b7280;font-size:0.8rem;">実際に購入しているタバコの価格を選択してください</small>
+        <small id="help-price" style="display:block;margin-top:0.25rem;color:#1e293b;font-size:0.85rem;font-weight:500;">実際に購入しているタバコの価格を選択してください</small>
       </div>
       <div>
         <label>喫煙年数 <span title="タバコを吸い始めてから現在までの年数です" style="cursor:help;color:#059669;font-weight:bold;">?</span></label>
         <input type="number" id="years-smoking" class="input-field" placeholder="例: 15" min="0" max="60" value="15" aria-label="喫煙年数（0〜60年）" aria-describedby="help-years">
-        <small id="help-years" style="display:block;margin-top:0.25rem;color:#6b7280;font-size:0.8rem;">例：20歳から吸い始めて現在35歳なら「15年」</small>
+        <small id="help-years" style="display:block;margin-top:0.25rem;color:#1e293b;font-size:0.85rem;font-weight:500;">例：20歳から吸い始めて現在35歳なら「15年」</small>
       </div>
       <div>
         <label>節約額の運用方法（将来資産計算用） <span title="節約したお金を何に投資するかで30年後の金額が変わります" style="cursor:help;color:#059669;font-weight:bold;">?</span></label>
@@ -199,16 +352,41 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           <option value="nisa" selected>新NISA（年利4%想定）</option>
           <option value="stock">積極的に投資（年利6%想定）</option>
         </select>
-        <small id="help-invest" style="display:block;margin-top:0.25rem;color:#6b7280;font-size:0.8rem;">運用方法により30年後の金額が大きく変わります。新NISAは税制優遇で人気です</small>
+        <small id="help-invest" style="display:block;margin-top:0.25rem;color:#1e293b;font-size:0.85rem;font-weight:500;">運用方法により30年後の金額が大きく変わります。新NISAは税制優遇で人気です</small>
       </div>
       <div>
         <label for="quit-date">禁煙開始日（任意：達成日数カウント用） <span title="禁煙を始めた日を入力するとリアルタイムで達成日数をカウントします" style="cursor:help;color:#059669;font-weight:bold;">?</span></label>
         <input type="date" id="quit-date" class="input-field" aria-label="禁煙開始日" aria-describedby="help-quit">
-        <small id="help-quit" style="display:block;margin-top:0.25rem;color:#6b7280;font-size:0.8rem;">入力すると禁煙経過日数と節約額を1秒単位で更新します（オプション）</small>
+        <small id="help-quit" style="display:block;margin-top:0.25rem;color:#1e293b;font-size:0.85rem;font-weight:500;">入力すると禁煙経過日数と節約額を1秒単位で更新します（オプション）</small>
+      </div>
+      <p style="font-size:0.8rem;color:#6b7280;margin-top:0.5rem;margin-bottom:0;text-align:center">↓ 下のボタンをクリックして、禁煙による節約額と健康効果を今すぐ計算 ↓</p>
+    </div>
+    <button class="btn-primary mt-5" onclick="calculate()" style="font-size:1.1rem;">シミュレーション開始 →</button>
+  </div><!-- end transparent card -->
+  </div><!-- end calc-panel (left col) -->
+
+  <!-- Right column -->
+  <div class="result-panel">
+
+  <!-- Default teaser (before calculation) -->
+  <div id="default-teaser" style="display:block;">
+    <div style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);overflow:hidden;margin-bottom:0;">
+      <img src="assets/photos/photo_03.jpg" alt="禁煙の効果" style="width:100%;height:220px;object-fit:cover;display:block;">
+      <div style="padding:24px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+          <div class="rs-box"><div class="rs-val">¥12,000</div><div class="rs-lbl">月間節約額の目安</div></div>
+          <div class="rs-box rs-accent"><div class="rs-val">¥144,000</div><div class="rs-lbl">年間節約額</div></div>
+          <div class="rs-box"><div class="rs-val">¥596万</div><div class="rs-lbl">30年後（新NISA）</div></div>
+          <div class="rs-box"><div class="rs-val">50年</div><div class="rs-lbl">グラフシミュレーション</div></div>
+        </div>
+        <p style="font-size:.78rem;color:#94a3b8;text-align:center;">※1日20本・1箱580円の場合の目安値</p>
       </div>
     </div>
-    <button class="btn-primary mt-5" onclick="calculate()">シミュレーションする →</button>
-  </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;">
+      <img src="assets/photos/photo_04.jpg" alt="健康回復" style="width:100%;height:120px;object-fit:cover;border-radius:12px;display:block;">
+      <img src="assets/photos/photo_06.jpg" alt="資産形成" style="width:100%;height:120px;object-fit:cover;border-radius:12px;display:block;">
+    </div>
+  </div><!-- end default-teaser -->
 
   <div id="results" class="card p-6 mb-4" style="display:none;">
     <h2 class="font-bold text-gray-800 mb-4">📊 シミュレーション結果</h2>
@@ -263,17 +441,34 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
       <button onclick="copyResults()" style="flex:1;min-width:120px;background:#10b981;color:white;padding:0.75rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.9rem;" id="copy-btn">📋 コピー</button>
       <button onclick="downloadCSV()" style="flex:1;min-width:120px;background:#f59e0b;color:white;padding:0.75rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.9rem;">💾 CSVダウンロード</button>
     </div>
+
+    <!-- M9: 結果シェア機能 -->
+    <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 mb-4 border border-blue-200">
+      <div class="font-bold text-gray-800 mb-3 text-sm">🔗 この結果をシェア</div>
+      <div class="flex gap-2 flex-wrap">
+        <button onclick="shareOnTwitter()" style="flex:1;min-width:110px;background:#1DA1F2;color:white;padding:0.65rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;display:flex;align-items:center;justify-content:center;gap:0.4rem">
+          <span>𝕏</span> ツイート
+        </button>
+        <button onclick="shareOnLine()" style="flex:1;min-width:110px;background:#00B900;color:white;padding:0.65rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;display:flex;align-items:center;justify-content:center;gap:0.4rem">
+          <span>💬</span> LINE
+        </button>
+        <button onclick="shareToClipboard()" style="flex:1;min-width:110px;background:#6366f1;color:white;padding:0.65rem;border-radius:0.5rem;border:none;cursor:pointer;font-weight:600;font-size:0.85rem;display:flex;align-items:center;justify-content:center;gap:0.4rem" id="share-clipboard-btn">
+          <span>📎</span> URL コピー
+        </button>
+      </div>
+      <div style="margin-top:0.75rem;font-size:0.8rem;color:#6b7280;text-align:center">禁煙の計算結果を家族・友人に共有して、禁煙を応援してもらおう！</div>
+    </div>
   </div>
 
   <div id="affiliate-section" class="card p-6 mb-4" style="display:none;">
     <h3 class="font-bold text-gray-800 mb-3">🚭 今すぐ禁煙を始めよう</h3>
     <div class="space-y-3">
-      <div class="bg-green-50 border border-green-200 rounded-xl p-4">
-        <div class="font-bold text-green-800 mb-1">禁煙外来・オンライン禁煙外来</div>
-        <p class="text-xs text-gray-600 mb-3">医師のサポートで禁煙成功率が3〜4倍アップ。保険適用で費用は5回で約1.5万円。節約額で1ヶ月以内に元が取れます。</p>
-        <a href="https://www.amazon.co.jp/s?k=禁煙+ニコチン+禁煙補助薬&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block text-center bg-green-600 text-white font-bold py-3 rounded-lg text-sm hover:bg-green-700 transition js-track-affiliate" data-platform="Amazon" data-item-name="禁煙ニコチン禁煙補助薬" data-link-type="affiliate_link">Amazonで禁煙サポートグッズを見る →</a>
+      <div class="bg-green-100 border border-green-300 rounded-xl p-4">
+        <div class="font-bold text-green-900 mb-1">禁煙外来・オンライン禁煙外来</div>
+        <p class="text-xs text-gray-700 mb-3">医師のサポートで禁煙成功率が3〜4倍アップ。保険適用で費用は5回で約1.5万円。節約額で1ヶ月以内に元が取れます。</p>
+        <a href="https://www.amazon.co.jp/s?k=禁煙+ニコチン+禁煙補助薬&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block text-center bg-green-600 text-white font-bold py-3 rounded-lg text-sm hover:bg-green-700 transition js-track-affiliate" data-platform="Amazon" data-item-name="禁煙ニコチン禁煙補助薬" data-link-type="affiliate_link">🛒 Amazonで禁煙補助薬を今すぐ見る</a>
       </div>
-      <a href="https://www.amazon.co.jp/s?k=禁煙グッズ+ニコチンパッチ&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block text-center bg-yellow-400 text-gray-900 font-bold py-3 rounded-xl text-sm hover:bg-yellow-500 transition js-track-affiliate" data-platform="Amazon" data-item-name="禁煙グッズニコチンパッチ" data-link-type="affiliate_link">Amazonで禁煙グッズを探す →</a>
+      <a href="https://www.amazon.co.jp/s?k=禁煙グッズ+ニコチンパッチ&tag=appadaycrea0f-22" target="_blank" rel="noopener" class="block text-center bg-yellow-400 text-gray-900 font-bold py-3 rounded-xl text-sm hover:bg-yellow-500 transition js-track-affiliate" data-platform="Amazon" data-item-name="禁煙グッズニコチンパッチ" data-link-type="affiliate_link">🛒 Amazonで禁煙グッズを今すぐ探す</a>
     </div>
     <div class="mt-3 text-xs text-center space-y-1">
       <div><a href="/mental-health-checker/" class="text-green-600 underline">ストレスチェック（禁煙のメンタルサポート）→</a></div>
@@ -283,7 +478,9 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
     <p class="text-xs text-gray-400 text-center mt-2">Amazonアソシエイトプログラム参加中</p>
   </div>
   <p class="text-xs text-gray-500 text-center">※運用シミュレーションは将来の利回りを保証するものではありません</p>
-</div>
+
+  </div><!-- end result-panel (right col) -->
+</div><!-- end calc-layout -->
 
 <script>
 var timeline=[
@@ -397,6 +594,38 @@ function drawCharts(monthly, investType) {
 // M10: 印刷機能
 function printResults() {
   window.print();
+}
+
+// M9: Twitter シェア機能
+function shareOnTwitter() {
+  var monthly = document.getElementById('r-monthly').textContent;
+  var yr10 = document.getElementById('r-10yr').textContent;
+  var text = '禁煙計算🚭 月の節約額: ' + monthly + ' / 10年後: ' + yr10 + ' を禁煙シミュレーターで計算しました。';
+  var url = 'https://appadaycreator.com/smoking-quit-simulator/';
+  var twitterUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url);
+  window.open(twitterUrl, '_blank', 'width=600,height=400');
+}
+
+// M9: LINE シェア機能
+function shareOnLine() {
+  var monthly = document.getElementById('r-monthly').textContent;
+  var yr10 = document.getElementById('r-10yr').textContent;
+  var text = '禁煙計算🚭' + '\n月の節約額: ' + monthly + ' / 10年後: ' + yr10 + '\n' + 'https://appadaycreator.com/smoking-quit-simulator/';
+  var lineUrl = 'https://line.me/R/msg/text/' + encodeURIComponent(text);
+  window.open(lineUrl, '_blank');
+}
+
+// M9: 結果URL シェア機能
+function shareToClipboard() {
+  var url = 'https://appadaycreator.com/smoking-quit-simulator/';
+  navigator.clipboard.writeText(url).then(function(){
+    var btn = document.getElementById('share-clipboard-btn');
+    var origText = btn.innerHTML;
+    btn.innerHTML = '✅ コピーしました';
+    setTimeout(function(){btn.innerHTML = origText;}, 2000);
+  }).catch(function(){
+    alert('コピーに失敗しました。ブラウザの機能をお確かめください。');
+  });
 }
 
 // M10: テキストコピー機能
@@ -549,6 +778,7 @@ function calculate(){
 
   document.getElementById('results').style.display='block';
   document.getElementById('affiliate-section').style.display='block';
+  var dt=document.getElementById('default-teaser');if(dt)dt.style.display='none';
   document.getElementById('results').scrollIntoView({behavior:'smooth'});
 }
 // 前回入力を復元
@@ -565,7 +795,185 @@ document.addEventListener('DOMContentLoaded', function() {
   if(lq){var el5=document.getElementById('quit-date');if(el5)el5.value=lq;}
 });
 </script>
-<div style="background:#fafafa;border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin:10px auto;max-width:680px;"><h2 style="font-size:13px;font-weight:700;margin-bottom:6px;color:#374151;">🔍 計算・判定の仕組み</h2></div>
+<!-- What this tool can do section -->
+<section class="what-section" id="what-section">
+  <div class="what-inner">
+    <p class="s-label">このツールでわかること</p>
+    <h2 class="s-title">禁煙がもたらす変化を数値で見る</h2>
+    <p class="s-sub">節約額・健康回復・将来資産を複数の視点から可視化します。</p>
+    <div class="what-grid">
+      <div class="what-card">
+        <img src="assets/icons/split/01-07.png" alt="" class="what-icon">
+        <h3>50年先まで見えるグラフ</h3>
+        <p>長期の節約額を折れ線グラフで可視化。投資方法別の比較も一目でわかります。</p>
+      </div>
+      <div class="what-card">
+        <img src="assets/icons/split/01-02.png" alt="" class="what-icon">
+        <h3>月・年・10年・30年の節約額</h3>
+        <p>タバコ代だけでなく新NISA運用を含めた総資産を自動計算します。</p>
+      </div>
+      <div class="what-card">
+        <img src="assets/icons/split/02-01.png" alt="" class="what-icon">
+        <h3>医学的健康回復タイムライン</h3>
+        <p>禁煙後20分〜15年の健康回復をWHO・厚生労働省データをもとに表示。</p>
+      </div>
+      <div class="what-card">
+        <img src="assets/icons/split/04-01.png" alt="" class="what-icon">
+        <h3>禁煙外来との費用比較</h3>
+        <p>禁煙外来費用（保険適用）と節約額を比較し、何ヶ月で元が取れるか計算します。</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;">
+      <img src="assets/photos/photo_07.jpg" alt="禁煙効果1" style="width:100%;height:130px;object-fit:cover;border-radius:12px;display:block;">
+      <img src="assets/photos/photo_08.jpg" alt="禁煙効果2" style="width:100%;height:130px;object-fit:cover;border-radius:12px;display:block;">
+      <img src="assets/photos/photo_09.jpg" alt="禁煙効果3" style="width:100%;height:130px;object-fit:cover;border-radius:12px;display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- Body recovery section -->
+<section class="body-section" id="body-section">
+  <div class="body-inner">
+    <p class="s-label">禁煙すると体に起こること</p>
+    <h2 class="s-title">健康回復タイムライン</h2>
+    <p class="s-sub">禁煙後の体の変化は驚くほど早く始まります。科学的データに基づいたタイムライン。</p>
+    <div class="body-grid">
+      <div class="body-row">
+        <div class="body-icon">❤️</div>
+        <div><h4>20分後</h4><p>心拍数・血圧が正常値に近づき始める</p></div>
+      </div>
+      <div class="body-row">
+        <div class="body-icon">🫁</div>
+        <div><h4>12時間後</h4><p>血液中の一酸化炭素濃度が正常レベルに回復</p></div>
+      </div>
+      <div class="body-row">
+        <div class="body-icon">🏃</div>
+        <div><h4>2〜3ヶ月後</h4><p>血液循環が改善し、肺機能が30%向上</p></div>
+      </div>
+      <div class="body-row">
+        <div class="body-icon">💪</div>
+        <div><h4>1年後</h4><p>心臓病リスクが喫煙者の半分に低下</p></div>
+      </div>
+      <div class="body-row">
+        <div class="body-icon">🧠</div>
+        <div><h4>5年後</h4><p>脳卒中リスクが非喫煙者と同レベルに</p></div>
+      </div>
+      <div class="body-row">
+        <div class="body-icon">🏆</div>
+        <div><h4>15年後</h4><p>心臓病リスクが非喫煙者とほぼ同レベルに</p></div>
+      </div>
+    </div>
+    <div class="body-photo-strip">
+      <img src="assets/photos/photo_10.jpg" alt="健康1">
+      <img src="assets/photos/photo_11.jpg" alt="健康2">
+      <img src="assets/photos/photo_12.jpg" alt="健康3">
+    </div>
+  </div>
+</section>
+
+<!-- Cost comparison + action section -->
+<section class="action-section">
+  <div class="action-inner">
+    <p class="s-label">費用の比較</p>
+    <h2 class="s-title">禁煙外来 vs. 節約額</h2>
+    <p class="s-sub">禁煙外来の費用と節約額を比較すると、禁煙がいかに経済的か一目でわかります。</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;">
+      <div style="background:#fef3c7;border:2px solid #fde68a;border-radius:14px;padding:20px;text-align:center;">
+        <img src="assets/icons/split/01-06.png" alt="" style="width:36px;height:36px;object-fit:contain;margin-bottom:10px;">
+        <div style="font-size:1.5rem;font-weight:800;color:#d97706;">¥15,000</div>
+        <div style="font-size:.72rem;color:#92400e;margin-top:4px;">禁煙外来費用（保険適用・5回）</div>
+      </div>
+      <div style="background:#dcfce7;border:2px solid #86efac;border-radius:14px;padding:20px;text-align:center;">
+        <img src="assets/icons/split/01-02.png" alt="" style="width:36px;height:36px;object-fit:contain;margin-bottom:10px;">
+        <div style="font-size:1.5rem;font-weight:800;color:#059669;">¥8,700</div>
+        <div style="font-size:.72rem;color:#065f46;margin-top:4px;">月間節約額（1日20本・580円）</div>
+      </div>
+      <div style="background:#e0f2fe;border:2px solid #7dd3fc;border-radius:14px;padding:20px;text-align:center;">
+        <img src="assets/icons/split/03-06.png" alt="" style="width:36px;height:36px;object-fit:contain;margin-bottom:10px;">
+        <div style="font-size:1.5rem;font-weight:800;color:#0EA5E9;">約2ヶ月</div>
+        <div style="font-size:.72rem;color:#0c4a6e;margin-top:4px;">外来費用が元取れる期間</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <p class="s-label" style="margin-bottom:12px;">今すぐ行動しよう</p>
+      <div class="action-grid">
+        <div class="action-photo">
+          <img src="assets/photos/photo_05.jpg" alt="禁煙チャレンジ">
+        </div>
+        <div class="action-items">
+          <div class="action-item">
+            <img src="assets/icons/split/03-04.png" alt="" class="action-item-icon">
+            <div><h4>禁煙開始日を入力してカウンター開始</h4><p>秒単位で節約額をカウント。達成感がモチベーションを高めます。</p></div>
+          </div>
+          <div class="action-item">
+            <img src="assets/icons/split/04-02.png" alt="" class="action-item-icon">
+            <div><h4>50年グラフで将来を確認</h4><p>長期投資効果を視覚化して老後資金形成のモチベーションに。</p></div>
+          </div>
+          <div class="action-item">
+            <img src="assets/icons/split/03-02.png" alt="" class="action-item-icon">
+            <div><h4>SNSで家族・友人に共有</h4><p>計算結果をX・LINEで共有して禁煙を宣言。周囲のサポートを得ましょう。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related photos detail grid -->
+<section style="background:#f8fafc;padding:56px 20px;">
+  <div style="max-width:1140px;margin:0 auto;">
+    <p class="s-label">関連サービス</p>
+    <h2 class="s-title">禁煙と合わせて使いたいツール</h2>
+    <div class="detail-grid">
+      <div class="detail-card">
+        <img src="assets/photos/photo_13.jpg" alt="ストレスチェック">
+        <div class="detail-card-body">
+          <h4><a href="https://appadaycreator.com/mental-health-checker/" style="color:#0EA5E9;text-decoration:none;">ストレスチェッカー</a></h4>
+          <p>禁煙中のメンタルヘルスをチェック。イライラや不安を客観的に把握できます。</p>
+        </div>
+      </div>
+      <div class="detail-card">
+        <img src="assets/photos/photo_14.jpg" alt="FIRE計算">
+        <div class="detail-card-body">
+          <h4><a href="https://appadaycreator.com/fire-calculator/lp/" style="color:#0EA5E9;text-decoration:none;">FIRE計算機</a></h4>
+          <p>節約額をFIRE（経済的自立）に活用するための計算ツールです。</p>
+        </div>
+      </div>
+      <div class="detail-card">
+        <img src="assets/photos/photo_15.jpg" alt="家計簿診断">
+        <div class="detail-card-body">
+          <h4><a href="https://appadaycreator.com/household-budget-analyzer/" style="color:#0EA5E9;text-decoration:none;">家計簿診断</a></h4>
+          <p>タバコ代以外の固定費も一緒に見直して、総節約額を最大化しましょう。</p>
+        </div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px;">
+      <img src="assets/photos/photo_16.jpg" alt="" style="width:100%;height:100px;object-fit:cover;border-radius:10px;display:block;">
+      <img src="assets/photos/photo_17.jpg" alt="" style="width:100%;height:100px;object-fit:cover;border-radius:10px;display:block;">
+      <img src="assets/photos/photo_18.jpg" alt="" style="width:100%;height:100px;object-fit:cover;border-radius:10px;display:block;">
+      <img src="assets/photos/photo_19.jpg" alt="" style="width:100%;height:100px;object-fit:cover;border-radius:10px;display:block;">
+    </div>
+  </div>
+</section>
+
+<div style="background:#fafafa;border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin:10px auto;max-width:680px;display:none;"><h2 style="font-size:13px;font-weight:700;margin-bottom:6px;color:#374151;">🔍 計算・判定の仕組み</h2></div>
+<!-- Final CTA banner -->
+<section class="lp-banner">
+  <h2>今日が、禁煙をはじめる日に。</h2>
+  <p>まずは喫煙本数と価格を入力するだけ。あなたの禁煙がもたらす節約額と健康回復を今すぐ確認。</p>
+  <a href="#main" class="lp-banner-btn">禁煙計画を立てる →</a>
+</section>
+
+<!-- Additional photo row before FAQ -->
+<div style="background:#fff;padding:32px 20px 0;">
+  <div style="max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+    <img src="assets/photos/photo_20.jpg" alt="" style="width:100%;height:110px;object-fit:cover;border-radius:10px;display:block;">
+    <img src="assets/photos/photo_21.jpg" alt="" style="width:100%;height:110px;object-fit:cover;border-radius:10px;display:block;">
+    <img src="assets/photos/photo_22.jpg" alt="" style="width:100%;height:110px;object-fit:cover;border-radius:10px;display:block;">
+    <img src="assets/photos/photo_06.jpg" alt="" style="width:100%;height:110px;object-fit:cover;border-radius:10px;display:block;">
+  </div>
+</div>
+
 <section style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:24px 16px;margin-top:16px;max-width:720px;margin-left:auto;margin-right:auto;">
   <h2 style="font-size:16px;font-weight:700;color:#1e293b;margin:0 0 16px;text-align:center;">❓ よくある質問（FAQ）</h2>
   <div style="max-width:680px;margin:0 auto;">
@@ -583,6 +991,14 @@ document.addEventListener('DOMContentLoaded', function() {
       <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#334155;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 本数や価格を変えて節約効果を試算し直せますか？ <span>▼</span></summary>
       <p style="padding:12px 16px;font-size:13px;color:#475569;margin:0;background:#f8fafc;">できます。喫煙本数・1箱の価格・禁煙開始日を変えて何度でも試算でき、禁煙外来や補助薬（保険適用で5回約1.5万円）の費用対効果の比較にもご活用いただけます。</p>
     </details>
+    <details style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px;overflow:hidden;">
+      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#334155;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. このツールを使う最適なタイミングはいつですか？ <span>▼</span></summary>
+      <p style="padding:12px 16px;font-size:13px;color:#475569;margin:0;background:#f8fafc;">禁煙開始時がもっとも効果的です。禁煙による節約額と健康効果を数字で確認することで、禁煙継続のモチベーションが高まります。既に禁煙中の方は、禁煙開始日を入力すると達成日数と節約額がリアルタイムでカウントされ、達成感を感じられます。</p>
+    </details>
+    <details style="border:1px solid #e2e8f0;border-radius:8px;margin-bottom:8px;overflow:hidden;">
+      <summary style="padding:12px 16px;cursor:pointer;font-size:14px;font-weight:600;color:#334155;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">Q. 新NISA（4%年利）と積極投資（6%年利）の違いは何ですか？ <span>▼</span></summary>
+      <p style="padding:12px 16px;font-size:13px;color:#475569;margin:0;background:#f8fafc;">新NISAは税金がかからない優遇制度で、投資初心者に適しています。積極投資（株式投資など）は利回りが高い可能性がありますが、元本割れのリスクもあります。ご自身の資産管理方針に合わせてお選びください。</p>
+    </details>
   </div>
 </section>
 
@@ -595,10 +1011,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <section class="bg-white rounded-2xl shadow-md p-5">
   <h3 style="font-size:14px;font-weight:700;color:#64748b;margin-bottom:12px;letter-spacing:0.03em;">関連サービス</h3>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
-    <a href="https://appadaycreator.com/mental-health-checker/" class="related-link">ストレスチェック</a>
-    <a href="https://appadaycreator.com/bmi-body-tracker/" class="related-link">BMI・体重管理</a>
-    <a href="https://appadaycreator.com/household-budget-analyzer/" class="related-link">家計簿診断</a>
-    <a href="https://appadaycreator.com/fire-calculator/lp/" class="related-link">FIRE計算機</a>
+    <a href="https://appadaycreator.com/mental-health-checker/" class="related-link" style="background:#f0fdf4;border-color:#86efac;color:#166534;font-weight:600;">🧘 ストレスチェック</a>
+    <a href="https://appadaycreator.com/bmi-body-tracker/" class="related-link" style="background:#eff6ff;border-color:#93c5fd;color:#1e40af;font-weight:600;">⚖️ BMI・体重管理</a>
+    <a href="https://appadaycreator.com/household-budget-analyzer/" class="related-link" style="background:#fefce8;border-color:#fde047;color:#713f12;font-weight:600;">💰 家計簿診断</a>
+    <a href="https://appadaycreator.com/fire-calculator/lp/" class="related-link" style="background:#fdf4ff;border-color:#e879f9;color:#6b21a8;font-weight:600;">🔥 FIRE計算機</a>
   </div>
 </section>
 </div>
@@ -610,19 +1026,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 style="font-size:1.125rem;font-weight:700;margin:0 0 1rem;color:#1e293b;border-left:4px solid #4f46e5;padding-left:10px">こんな方・シーンで役立ちます</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem">
 <div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">📋</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">家計の見直しを始めたい方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">毎月の支出を整理して節約できる項目を見つけたい方に。光熱費・通信費・保険など固定費の削減ポイントが分かります。</div>
+<div style="font-size:1.5rem;margin-bottom:.4rem">🚭</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">禁煙の節約効果を数字で確認したい方</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">「禁煙したらいくら節約できるか」を月額・年額・30年後の資産として可視化。新NISAで運用した場合のシミュレーションも即計算できます。</div>
 </div>
 <div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">💡</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">電気・ガス代を下げたい方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">使用量や生活パターンに合わせた最適な料金プランを探して、月々のコストを削減したい方に。年間節約額の目安が分かります。</div>
+<div style="font-size:1.5rem;margin-bottom:.4rem">🏥</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">禁煙外来か自力禁煙か迷っている方</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">禁煙外来（保険適用で約1.5万円）の費用対効果を、あなたの喫煙本数・価格から自動計算。「何ヶ月で元が取れるか」が一目でわかります。</div>
 </div>
 <div style="padding:1rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<div style="font-size:1.5rem;margin-bottom:.4rem">💳</div>
-<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">ポイント・節約を最大化したい方</div>
-<div style="font-size:.85rem;color:#64748b;line-height:1.7">クレジットカード・電子マネー・サブスクを整理して、ポイント還元率や月額費用を最適化したい方に。</div>
+<div style="font-size:1.5rem;margin-bottom:.4rem">👨‍👩‍👧</div>
+<div style="font-weight:700;font-size:.9rem;color:#1e293b;margin-bottom:.4rem">家族・職場の仲間に禁煙を勧めたい方</div>
+<div style="font-size:.85rem;color:#64748b;line-height:1.7">「10年で○○万円の節約」「1年後に心疾患リスクが半減」など、具体的なデータで禁煙を後押し。印刷・クリップボードコピー機能で共有も簡単です。</div>
 </div>
 </div>
 </div>
@@ -633,6 +1049,8 @@ document.addEventListener('DOMContentLoaded', function() {
 <div style="margin-top:12px;display:flex;flex-direction:column;gap:12px">
 <div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. 禁煙後に体重が増えるのはなぜですか？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">たばこには食欲抑制・代謝促進の効果があるため、禁煙すると食欲が増加しやすく、基礎代謝もやや低下します。禁煙後の平均体重増加量は4〜5kgとされています。対策として「禁煙と同時にカロリーの高いスナック菓子の摂取を増やさない」「禁煙で浮いたお金を運動・フィットネスに使う」「禁煙後3ヶ月以上安定してから積極的なダイエットを開始する（禁煙とダイエットの同時実施はストレスが大きい）」があります。</p></div>
 <div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. 電子たばこ・加熱式たばこへの切り替えは禁煙の代替になりますか？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">電子たばこ・加熱式たばこ（iQOS等）はニコチン依存性は維持したままであり、完全な禁煙ではありません。健康リスクの軽減効果については研究が進行中で、現時点では長期的な安全性は十分に確立されていません。禁煙を目標とする場合は、電子たばこへの切り替えよりも禁煙外来受診・ニコチン補充療法の活用が推奨されています。電子たばこを「禁煙のステップ」として使う方法については、医師に相談することをおすすめします。</p></div>
+<div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. 禁煙は一気にやめるべきか、段階的に本数を減らすべきですか？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">WHO・禁煙専門医の多くは「禁煙日を設定して一気にやめる（コールドターキー法）」を推奨しています。段階的な本数削減は達成感が得にくく、脳がニコチン欲求に敏感なままになるため長続きしにくい傾向があります。ただし合う方法は個人差があるため、重要なのは「禁煙開始日を明確に決める」ことです。本ツールの禁煙開始日カウンター機能を使うと、ゼロからのスタートを数字で実感できます。</p></div>
+<div style="border:1px solid #e2e8f0;border-radius:10px;padding:12px 14px"><p style="font-weight:600;color:#1e293b;margin:0 0 6px">Q. 禁煙後に「1本だけ」吸ってしまった場合、どう対処すればよいですか？</p><p style="font-size:.875rem;color:#475569;line-height:1.8;margin:0">「1本の失敗＝禁煙失敗」ではありません。禁煙研究では平均4〜5回の試みを経て成功するとされており、失敗は学習の一部です。喫煙したくなった状況（ストレス・飲酒・特定の場所）を記録し、次回同じ場面でどう行動するかを事前に計画しておくことが再発防止につながります。本ツールの禁煙カウンターを再設定して、新たなスタートを切りましょう。</p></div>
 </div>
 </div>
 </div>
@@ -652,12 +1070,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- r31-tool-references -->
 <div style="margin:1.5rem auto;max-width:760px;padding:0 1rem">
 <div style="padding:1.25rem 1.5rem;background:#f8fafc;border:1px solid #e2e8f0;border-radius:.75rem">
-<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#1e293b">📚 関連する公的情報・参考リンク</h3>
+<h3 style="font-size:1rem;font-weight:700;margin:0 0 .75rem;color:#1e293b">📚 禁煙に関する公的情報・参考リンク</h3>
 <ul style="margin:0;padding-left:1.25rem;font-size:.88rem;color:#374151;line-height:1.9">
-<li style='margin-bottom:.5rem'><a href="https://www.nta.go.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">国税庁 公式サイト</a> — 確定申告・税率・控除制度の最新情報。e-Taxを使った電子申告の手順も掲載</li>
-<li style='margin-bottom:.5rem'><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/nenkin/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">厚生労働省 年金・社会保険</a> — 公的年金・雇用保険・健康保険の仕組みと給付内容</li>
-<li style='margin-bottom:.5rem'><a href="https://www.fsa.go.jp/policy/nisa2/about/index.html" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">金融庁 NISA・iDeCo制度</a> — 新NISAの非課税枠・iDeCoの掛金上限などの公式解説</li>
-<li style='margin-bottom:.5rem'><a href="https://www.fpkk.or.jp/" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">日本FP協会</a> — ファイナンシャルプランニングの基礎知識・無料相談窓口</li>
+<li style='margin-bottom:.5rem'><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/kenkou/tobacco/index.html" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">厚生労働省「たばこと健康」</a> — 禁煙外来の案内・喫煙が及ぼす健康影響・受動喫煙対策の公式情報</li>
+<li style='margin-bottom:.5rem'><a href="https://ganjoho.jp/public/pre_scr/cause_prevention/smoking.html" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">国立がん研究センター がん情報サービス「喫煙」</a> — 喫煙と発がんリスクの科学的根拠・禁煙による健康回復効果</li>
+<li style='margin-bottom:.5rem'><a href="https://www.e-healthnet.mhlw.go.jp/information/tobacco" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">e-ヘルスネット（厚生労働省）「たばこ」</a> — ニコチン依存・禁煙補助薬（ニコチンパッチ・バレニクリン）の解説</li>
+<li style='margin-bottom:.5rem'><a href="https://www.fsa.go.jp/policy/nisa2/about/index.html" target="_blank" rel="noopener noreferrer" style="color:#4f46e5">金融庁 NISA制度</a> — 禁煙で節約したお金を新NISAで運用する場合の非課税枠・制度概要</li>
 </ul>
 </div>
 </div>
@@ -697,8 +1115,17 @@ document.addEventListener('DOMContentLoaded', function() {
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8427583028015858" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
 <script>try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}</script>
 </div>
-<div style="text-align:center;padding:10px 16px 14px;background:#eef2ff;border-top:2px solid #c7d2fe;margin-top:8px">
-<a href="/blog/" style="color:#4f46e5;font-size:.85rem;font-weight:700">📖 マネー・育児・キャリアのコラムを読む →</a>
+<div style="background:#0f172a;padding:40px 20px;">
+  <div style="max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div style="font-size:1rem;font-weight:800;color:#e2e8f0;">AppADayCreator</div>
+    <div style="display:flex;gap:20px;font-size:.82rem;">
+      <a href="privacy-policy.html" style="color:#94a3b8;text-decoration:none;">プライバシーポリシー</a>
+      <a href="contact.html" style="color:#94a3b8;text-decoration:none;">お問い合わせ</a>
+      <a href="/blog/" style="color:#94a3b8;text-decoration:none;">コラム</a>
+      <a href="https://appadaycreator.com/" style="color:#94a3b8;text-decoration:none;">ホーム</a>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:.75rem;color:#475569;margin-top:20px;">© 2026 AppADayCreator / Tech&amp;Brace. All rights reserved.</p>
 </div>
 
 <section aria-labelledby="faq-h" class="bg-white rounded-2xl shadow-md p-4 mb-4" style="max-width:740px;margin-left:auto;margin-right:auto">
@@ -771,22 +1198,44 @@ document.addEventListener('DOMContentLoaded', function() {
   </dl>
 </section>
 <div style="background:#eef2ff;border-left:4px solid #4f46e5;border-radius:.5rem;padding:1rem 1.25rem;margin:1.5rem auto;max-width:760px;font-size:.875rem">
-<p style="margin:0 0 .5rem;font-weight:700;color:#3730a3">📖 お役立ちコラム</p>
+<p style="margin:0 0 .5rem;font-weight:700;color:#3730a3">🔗 禁煙と合わせて使いたいツール</p>
 <ul style="margin:0;padding-left:1.25rem;color:#4f46e5;line-height:2">
-<li><a href="/blog/stock-investment-beginner/" style="color:#4f46e5">株式投資の始め方【初心者完全ガイド】</a></li>
-<li><a href="/blog/nisa-comparison/" style="color:#4f46e5">新NISA vs iDeCo 徹底比較</a></li>
-<li><a href="/blog/investment-risk-management/" style="color:#4f46e5">投資のリスク管理入門</a></li>
+<li><a href="/mental-health-checker/" style="color:#4f46e5">禁煙中のストレスをチェック → ストレスチェッカー</a></li>
+<li><a href="/fire-calculator/lp/" style="color:#4f46e5">節約額でFIREを目指す → FIRE計算機</a></li>
+<li><a href="/subscription-calculator/" style="color:#4f46e5">タバコ代以外の固定費も削減 → サブスク・固定費計算機</a></li>
 </ul>
 </div>
 <!-- r17-mobile-ux -->
+<!-- V1/V3 fix: スティッキー計算CTAボタン（メインボタンがスクロール外の場合に表示） -->
+<div id="sticky-calc-bar" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:8500;padding:10px 16px;background:rgba(255,255,255,.97);box-shadow:0 -2px 10px rgba(0,0,0,.18);">
+  <button onclick="calculate()" style="width:100%;background:#059669;color:white;border:none;border-radius:.75rem;padding:.875rem 2rem;font-size:1rem;font-weight:700;cursor:pointer;touch-action:manipulation;min-height:48px;">🧮 計算結果を見る →</button>
+</div>
 <a href="#top" id="back-to-top" aria-label="ページトップへ戻る" style="display:none;position:fixed;bottom:24px;right:20px;background:#4f46e5;color:#fff;border:none;border-radius:50%;width:48px;height:48px;font-size:1.4rem;line-height:48px;text-align:center;text-decoration:none;box-shadow:0 4px 12px rgba(79,70,229,.4);z-index:9000;cursor:pointer" title="ページトップへ">↑</a>
 <script>
 (function(){
   var btn = document.getElementById('back-to-top');
-  if(!btn) return;
-  window.addEventListener('scroll', function(){
-    btn.style.display = window.scrollY > 400 ? 'block' : 'none';
-  }, {passive:true});
+  if(btn) {
+    window.addEventListener('scroll', function(){
+      btn.style.display = window.scrollY > 400 ? 'block' : 'none';
+    }, {passive:true});
+  }
+  // V1/V3 fix: メイン計算ボタンが画面外に出たらスティッキーCTAを表示
+  var bar = document.getElementById('sticky-calc-bar');
+  var mainBtn = document.querySelector('button.btn-primary');
+  var banner = document.getElementById('cookie-banner');
+  if(bar && mainBtn) {
+    function checkCalcBtn(){
+      var r = mainBtn.getBoundingClientRect();
+      var inView = r.top < window.innerHeight && r.bottom > 0;
+      bar.style.display = inView ? 'none' : 'block';
+      // Cookieバナーが表示されている場合はその上に配置
+      var bh = (banner && banner.style.display !== 'none' && banner.offsetParent !== null) ? banner.offsetHeight : 0;
+      bar.style.bottom = bh + 'px';
+    }
+    window.addEventListener('scroll', checkCalcBtn, {passive:true});
+    window.addEventListener('resize', checkCalcBtn, {passive:true});
+    checkCalcBtn();
+  }
 })();
 </script>
 <div style="text-align:center;margin:20px auto;max-width:728px;padding:0 16px">
@@ -794,9 +1243,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>try{(adsbygoogle = window.adsbygoogle || []).push({});}catch(e){}</script>
 </div>
 <!-- r31-cookie-banner -->
-<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1e293b;color:#f1f5f9;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;z-index:9999;font-size:.85rem;box-shadow:0 -2px 10px rgba(0,0,0,.3)">
-<div>当サイトはCookieおよびGoogle Analyticsを使用しています。<a href="/privacy-policy.html" style="color:#60a5fa;text-decoration:underline">プライバシーポリシー</a>をご確認ください。</div>
-<button onclick="document.getElementById('cookie-banner').style.display='none';window.grantConsent && window.grantConsent()" style="background:#3b82f6;color:#fff;border:none;padding:.5rem 1.25rem;border-radius:.375rem;font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap">同意して閉じる</button>
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#f8fafc;color:#374151;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;z-index:9999;font-size:.85rem;box-shadow:0 -2px 10px rgba(0,0,0,.08);border-top:1px solid #e2e8f0">
+<div>当サイトはCookieおよびGoogle Analyticsを使用しています。<a href="/privacy-policy.html" style="color:#4f46e5;text-decoration:underline">プライバシーポリシー</a>をご確認ください。</div>
+<button onclick="document.getElementById('cookie-banner').style.display='none';window.grantConsent && window.grantConsent()" style="background:#059669;color:white;border:none;padding:.3rem .875rem;border-radius:.375rem;font-size:.78rem;cursor:pointer;white-space:nowrap;flex-shrink:0;font-weight:600">✓ OK・同意する</button>
 </div>
 <script>if(localStorage.getItem('cookie-consent'))document.getElementById('cookie-banner').style.display='none'</script>
 <!-- r46-org-footer -->
