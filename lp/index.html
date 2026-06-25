@@ -31,17 +31,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 /* Hero */
 .hero{position:relative;min-height:580px;display:flex;align-items:center;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center top;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,30,60,.78) 0%,rgba(0,30,60,.55) 55%,rgba(0,30,60,.2) 100%);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(2,132,199,.9) 0%,rgba(5,150,105,.84) 60%,rgba(2,132,199,.5) 100%);}
 .hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;width:100%;padding:60px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-.hero-text h1{font-size:2.5rem;font-weight:900;color:#fff;line-height:1.25;margin-bottom:16px;letter-spacing:-.5px;}
-.hero-text h1 span{color:#34D399;}
-.hero-text p{font-size:1.05rem;color:#cbd5e1;line-height:1.7;margin-bottom:24px;}
+.hero-text h1{font-size:2.9rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;text-shadow:0 2px 16px rgba(0,0,0,.25);}
+.hero-text h1 span{color:#a7f3d0;text-shadow:0 2px 12px rgba(0,0,0,.2);}
+.hero-text p{font-size:1.05rem;color:rgba(255,255,255,.92);line-height:1.7;margin-bottom:24px;}
 .hero-stats{display:flex;gap:16px;margin-bottom:28px;flex-wrap:wrap;}
-.hero-stat{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:10px 18px;text-align:center;backdrop-filter:blur(4px);}
-.hero-stat-val{font-size:1.4rem;font-weight:800;color:#34D399;}
-.hero-stat-lbl{font-size:.72rem;color:#cbd5e1;margin-top:2px;}
-.btn-hero{display:inline-block;background:#10B981;color:#fff;padding:1rem 2.5rem;border-radius:12px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:all .2s;box-shadow:0 4px 20px rgba(16,185,129,.4);}
-.btn-hero:hover{background:#059669;transform:translateY(-2px);}
+.hero-stat{background:rgba(255,255,255,.25);border:2px solid rgba(255,255,255,.55);border-radius:14px;padding:14px 24px;text-align:center;backdrop-filter:blur(10px);}
+.hero-stat-val{font-size:1.9rem;font-weight:900;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.2);}
+.hero-stat-lbl{font-size:.76rem;color:rgba(255,255,255,.92);margin-top:3px;font-weight:600;}
+.btn-hero{display:inline-block;background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff;padding:1.1rem 2.8rem;border-radius:14px;font-size:1.15rem;font-weight:800;text-decoration:none;transition:all .2s;box-shadow:0 6px 28px rgba(249,115,22,.5);letter-spacing:.02em;}
+.btn-hero:hover{transform:translateY(-3px);box-shadow:0 10px 36px rgba(249,115,22,.6);}
 .hero-visual{display:flex;flex-direction:column;gap:12px;}
 .hero-photo{border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4);}
 .hero-photo img{width:100%;height:260px;object-fit:cover;display:block;}
@@ -163,6 +163,38 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 /* Gallery strip */
 .gallery-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px;}
 .gallery-strip img{width:100%;height:120px;object-fit:cover;border-radius:10px;display:block;}
+
+/* Colorful section backgrounds */
+.section-bg-blue{background:linear-gradient(135deg,#dbeafe 0%,#bfdbfe 100%);}
+.section-bg-green{background:linear-gradient(135deg,#dcfce7 0%,#bbf7d0 100%);}
+.section-bg-orange{background:linear-gradient(135deg,#ffedd5 0%,#fed7aa 100%);}
+.section-bg-yellow{background:linear-gradient(135deg,#fefce8 0%,#fef9c3 100%);}
+.section-bg-teal{background:linear-gradient(135deg,#ccfbf1 0%,#a5f3fc 100%);}
+
+/* Feature cards: colorful per-position via nth-child */
+.features-grid .feature-card:nth-child(1){background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border:1.5px solid #bae6fd;}
+.features-grid .feature-card:nth-child(2){background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1.5px solid #86efac;}
+.features-grid .feature-card:nth-child(3){background:linear-gradient(135deg,#fff7ed,#ffedd5);border:1.5px solid #fdba74;}
+.features-grid .feature-card:nth-child(4){background:linear-gradient(135deg,#faf5ff,#ede9fe);border:1.5px solid #c4b5fd;}
+.features-grid .feature-card:nth-child(1) .feature-icon{background:#bae6fd;}
+.features-grid .feature-card:nth-child(2) .feature-icon{background:#bbf7d0;}
+.features-grid .feature-card:nth-child(3) .feature-icon{background:#fdba74;}
+.features-grid .feature-card:nth-child(4) .feature-icon{background:#ddd6fe;}
+
+/* Timeline icons: colorful per-position */
+.tl-item:nth-child(1) .tl-icon{background:#fee2e2;}
+.tl-item:nth-child(2) .tl-icon{background:#dbeafe;}
+.tl-item:nth-child(3) .tl-icon{background:#ccfbf1;}
+.tl-item:nth-child(4) .tl-icon{background:#dcfce7;}
+.tl-item:nth-child(5) .tl-icon{background:#ede9fe;}
+.tl-item:nth-child(6) .tl-icon{background:#fef9c3;}
+
+/* Stat box color variants */
+.stat-box.sb-green{background:#10B981;}
+.stat-box.sb-orange{background:#f59e0b;}
+.stat-box.sb-purple{background:#8b5cf6;}
+.stat-box.sb-green .s-val,.stat-box.sb-orange .s-val,.stat-box.sb-purple .s-val{color:#fff;}
+.stat-box.sb-green .s-lbl,.stat-box.sb-orange .s-lbl,.stat-box.sb-purple .s-lbl{color:rgba(255,255,255,.88);}
 
 /* Responsive */
 @media(max-width:900px){
@@ -304,7 +336,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 </section>
 
 <!-- Steps -->
-<section class="section section-bg-light" id="steps">
+<section class="section section-bg-green" id="steps">
   <div class="section-inner">
     <p class="section-label">使い方</p>
     <h2 class="section-title">使い方はかんたん3ステップ</h2>
@@ -345,7 +377,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 </section>
 
 <!-- Example Results -->
-<section class="section" id="results">
+<section class="section section-bg-yellow" id="results">
   <div class="section-inner">
     <p class="section-label">シミュレーション実例</p>
     <h2 class="section-title">シミュレーション結果（実例）</h2>
@@ -353,7 +385,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
     <div class="results-demo">
       <div>
         <div class="results-stats">
-          <div class="stat-box">
+          <div class="stat-box sb-orange">
             <div class="s-val">¥144,000</div>
             <div class="s-lbl">年間節約額</div>
           </div>
@@ -361,11 +393,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
             <div class="s-val">¥1,440,000</div>
             <div class="s-lbl">10年後の節約額</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-box sb-green">
             <div class="s-val">¥596万</div>
             <div class="s-lbl">30年後（新NISA）</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-box sb-purple">
             <div class="s-val">¥12,000</div>
             <div class="s-lbl">月の節約額</div>
           </div>
@@ -387,7 +419,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 </section>
 
 <!-- Photo gallery row -->
-<section class="section section-bg-gray">
+<section class="section section-bg-teal">
   <div class="section-inner">
     <p class="section-label">健康回復</p>
     <h2 class="section-title">体の回復タイムライン</h2>
@@ -470,7 +502,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 </section>
 
 <!-- Clinic compare -->
-<section class="section">
+<section class="section section-bg-orange">
   <div class="section-inner">
     <p class="section-label">費用比較</p>
     <h2 class="section-title">禁煙外来と比較</h2>
@@ -502,7 +534,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 </section>
 
 <!-- Photo rich features -->
-<section class="section section-bg-gray">
+<section class="section section-bg-blue">
   <div class="section-inner">
     <p class="section-label">活用シーン</p>
     <h2 class="section-title">こんな方に使われています</h2>
@@ -596,7 +628,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1
 </section>
 
 <!-- Additional photos strip -->
-<section class="section">
+<section class="section section-bg-green">
   <div class="section-inner">
     <p class="section-label">今すぐはじめよう</p>
     <h2 class="section-title">超リサポート機能</h2>
